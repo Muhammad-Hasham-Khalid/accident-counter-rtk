@@ -2,15 +2,15 @@ import { createAction, createReducer } from '@reduxjs/toolkit';
 
 type CounterState = { count: number };
 
-const increment = createAction('INCREMENT', (amount: number) => ({
+export const increment = createAction('INCREMENT', (amount: number) => ({
   payload: amount,
 }));
 
-const decrement = createAction('DECREMENT', (amount: number) => ({
+export const decrement = createAction('DECREMENT', (amount: number) => ({
   payload: amount,
 }));
 
-const reset = createAction('RESET');
+export const reset = createAction('RESET');
 
 type CounterAction =
   | ReturnType<typeof increment>
